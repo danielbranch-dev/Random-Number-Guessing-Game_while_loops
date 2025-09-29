@@ -1,9 +1,12 @@
+// Utilizing While Loops and Do While Loops //
+
+
 /*This program is an html file, that uses "script" to create a guessing number generator. We initialize the variable called guessNumber to 0 which is our starting point.
 The number to guess is 71. We also delcare a variable named guess which is not used by the program. While the guessNumber is NOT = the numberToGuess, the program iterates 
 the guessNumber which was originally 0 by increments of +1 until it reaches 71. The document.getElementById calls the HTML divider in order to create a link and later
 manipulate its properties.*/ 
 
-
+//WHile Loop Document//
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,3 +33,34 @@ manipulate its properties.*/
     </script>
   </body>
 </html>
+
+//DO while Loop document//
+/*This document does the reverse of a while loop. Instead of saying while the guessNumber canNOT = numberToGuess
+increment the guessNumber by +1, rather the document below says: increment the number to guess while the 
+guessNumber canNOT = numberToGuess. It's just like the inverse. */
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random number with a while loop</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let guessNumber = 0;
+      let numberToGuess = 71;
+      let guess; //Code does Nothing
+/*DO this function while a condition cannot be true*/
+      do {
+        guess = Math.floor(Math.random() * 100); //Code does Nothing
+        guessNumber++;
+      } while (guessNumber != numberToGuess);
+
+      document.getElementById("root").innerHTML = `<h2> I guessed it</h2>
+       <p>It only took me ${guessNumber} guesses</p>`;
+    </script>
+  </body>
+</html>
+
