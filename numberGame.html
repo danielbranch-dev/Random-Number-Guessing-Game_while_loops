@@ -1,0 +1,31 @@
+/*This program is an html file, that uses "script" to create a guessing number generator. We initialize the variable called guessNumber to 0 which is our starting point.
+The number to guess is 71. We also delcare a variable named guess which is not used by the program. While the guessNumber is NOT = the numberToGuess, the program iterates 
+the guessNumber which was originally 0 by increments of +1 until it reaches 71. The document.getElementById calls the */ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random number with a while loop</title>
+  </head>
+  <body>
+    <div id="root"></div> /* Its important to Note we created a divider for data to be displayed. In this case its the text data. */
+    <script>
+      let guessNumber = 0;
+      let numberToGuess = 71;
+      let guess; /*Does nothing*/
+      while (guessNumber != numberToGuess) {
+        guess = Math.floor(Math.random() * 100); /*Does nothing*/
+        guessNumber++;
+      }
+      /* We link the divider id named "root" for document.getElementById("root") together within our java"script" tag. 
+      The .innerHTML parses javascript code into HTML code which is why we do not need to create an <h2> tag 
+      above in the body tag, but rather create an <h2> tag within our script block. Using the 
+      ` backtick, it is unneccesary to concatenate code using the arithmetic operator "+" sign and storing text in quotes "".*/
+      document.getElementById("root").innerHTML = `<h2> I guessed it</h2> 
+      <p>It only took me ${guessNumber} guesses</p>`;
+    </script>
+  </body>
+</html>
